@@ -1,9 +1,9 @@
-import java.util.Arrays;
+package com.java_revision;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.Map.Entry;
 
 public class Strings {
     public void countVowels(String str) {
@@ -92,7 +92,6 @@ public class Strings {
             }
         }
 
-
         System.out.println(stringBuilder);
     }
 
@@ -129,8 +128,8 @@ public class Strings {
 
         // Sol 2
         // if (str1.length() != str2.length()) {
-        //     System.out.println("false");
-        //     return;
+        // System.out.println("false");
+        // return;
         // }
 
         // char[] arr1 = str1.toCharArray();
@@ -144,17 +143,17 @@ public class Strings {
 
         // Sol 3
         Map<Character, Integer> freqMap = new HashMap<>();
-        for (char ch : str1.toCharArray()){
+        for (char ch : str1.toCharArray()) {
             freqMap.put(ch, freqMap.getOrDefault(ch, 0) + 1);
         }
 
         for (char ch : str2.toCharArray()) {
-            if (! freqMap.containsKey(ch)){
+            if (!freqMap.containsKey(ch)) {
                 System.out.println("false");
                 return;
             }
-            freqMap.put(ch, freqMap.get(ch) -1);
-            if (freqMap.get(ch) == 0 ){
+            freqMap.put(ch, freqMap.get(ch) - 1);
+            if (freqMap.get(ch) == 0) {
                 freqMap.remove(ch);
             }
         }
@@ -167,7 +166,7 @@ public class Strings {
         strings.countVowels("Hello Java");
         strings.reverseString("Java");
         strings.checkPalindromeString("madam");
-        strings.countWords("Java is awesome" );
+        strings.countWords("Java is awesome");
         strings.removeDigits("abc123xyz");
         strings.frequency("banana");
         strings.toogleCaseCharacters("Jass12Va");

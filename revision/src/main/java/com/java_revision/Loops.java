@@ -1,3 +1,5 @@
+package com.java_revision;
+
 public class Loops {
 
     public void printStarPattern(int rows) {

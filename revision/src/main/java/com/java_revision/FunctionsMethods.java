@@ -1,3 +1,5 @@
+package com.java_revision;
+
 public class FunctionsMethods {
 
     public int add(int a, int b) {
