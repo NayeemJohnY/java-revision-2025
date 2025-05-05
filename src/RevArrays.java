@@ -139,27 +139,25 @@ public class RevArrays {
         System.out.println(highestFrequencyElement);
     }
 
-    public void mergeTwoSortedArrays(int[] arr1, int[] arr2) {
-        int[] mergedarray = new int[arr1.length + arr2.length];
-        int i = 0, j = 0, k = 0;
-        while (i < arr1.length && j < arr2.length) {
-            if (arr1[i] < arr2[j]) {
+    public void mergeTwoSortedArrays(int[] arr1, int[] arr2){
+        int [] mergedarray = new int[arr1.length + arr2.length];
+        int i=0, j=0, k =0;
+        while(i < arr1.length && j <arr2.length){
+            if (arr1[i]< arr2[j]){
                 mergedarray[k++] = arr1[i++];
-            } else {
+            } else{
                 mergedarray[k++] = arr2[j++];
             }
         }
-        while (i < arr1.length)
-            mergedarray[k++] = arr1[i++];
-        while (j < arr2.length)
-            mergedarray[k++] = arr2[j++];
+        while (i < arr1.length) mergedarray[k++] = arr1[i++];
+        while (j < arr2.length) mergedarray[k++] = arr2[j++];
         System.out.println(Arrays.toString(mergedarray));
     }
 
-    public void findCommonElementsInArrays(int[] arr1, int[] arr2) {
+    public void findCommonElementsInArrays(int[] arr1, int[] arr2){
         HashMap<Integer, Integer> hashMap = new HashMap<>();
         for (int i = 0; i < arr1.length; i++) {
-            if (!hashMap.containsKey(arr1[i])) {
+            if (!hashMap.containsKey(arr1[i])){
                 hashMap.put(arr1[i], 1);
             }
         }
@@ -168,22 +166,21 @@ public class RevArrays {
             hashMap.put(arr2[i], hashMap.getOrDefault(arr2[i], 0) + 1);
         }
 
-        HashSet<Integer> set = new HashSet<>();
+        HashSet<Integer> set =  new HashSet<>();
         for (Entry<Integer, Integer> entry : hashMap.entrySet()) {
-            if (entry.getValue() > 1) {
+            if(entry.getValue() > 1){
                 set.add(entry.getKey());
             }
         }
         System.out.println(set);
     }
 
-    public boolean checkTwoArraysAreEqual(int[] arr1, int[] arr2) {
+    public boolean checkTwoArraysAreEqual(int[] arr1, int[] arr2){
 
-        if (arr1.length != arr2.length)
-            return false;
+        if (arr1.length != arr2.length) return false;
 
         for (int i = 0; i < arr1.length; i++) {
-            if (arr1[i] != arr2[i]) {
+            if (arr1[i] != arr2[i]){
                 System.out.println("Both are not equal");
                 return false;
             }
@@ -191,6 +188,24 @@ public class RevArrays {
         System.out.println("Both are equal");
         return true;
     }
+
+
+    // Max and Min element in array
+    public void minMaxElement(int[] arr){
+        int min, max;
+        min = max = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] < min){
+                min = arr[i];
+            }
+            if (arr[i] > max){
+                max = arr[i];
+            }
+        }
+        System.out.println("Min value : " + min);
+        System.out.println("Max value : " + max);
+    }
+
 
     public static void main(String[] args) {
         int[] arr = { 1, 2, 3, 4, 5, 7, 9, 3, 0, -1, 2, 1, 4, 4, 4, 4 };
@@ -208,7 +223,8 @@ public class RevArrays {
         revarrays.findHighestFrequencyElement(arr);
         revarrays.checkTwoArraysAreEqual(new int[] { 1, 2, 3, 4, 5, 6, 7 }, new int[] { 1, 2, 3, 4, 5, 6, 7 });
         revarrays.checkTwoArraysAreEqual(new int[] { 1, 2, 3, 4, 5, 6, 7 }, arr);
-        revarrays.findCommonElementsInArrays(arr, new int[] { 1, 55, 9, 77 });
+        revarrays.findCommonElementsInArrays(arr, new int[]{1, 55, 9, 77});
         revarrays.mergeTwoSortedArrays(new int[] { 1, 2, 3, 4, 15, 16, 17 }, new int[] { 1, 2, 13, 14, 55, 66, 67 });
+        revarrays.minMaxElement(arr);
     }
 }
