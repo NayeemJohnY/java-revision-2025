@@ -9,7 +9,7 @@
 | 7  | Arrays in Java                    | ✅ Done         | ✅               | ✅       | ✅                 |
 | 8  | Functions / Methods               | ✅ Done         | ✅               | ✅       | ✅                 |
 | 9  | Object-Oriented Programming (OOP) | ⏳ Pending      | Planned         | Planned | Planned           |
-| 10 | Exception Handling                | ⏳ Pending      | Planned         | Planned | Planned           |
+| 10 | Exception Handling                | ✅ Done         | ✅               | ✅       | ✅                 |
 | 11 | Collections Framework             | ⏳ Pending      | Planned         | Planned | Planned           |
 | 12 | Java 8 Features (Streams, Lambda) | ⏳ Pending      | Planned         | Planned | Planned           |
 | 13 | Java 9–21 Version Updates         | ⏳ Pending      | Planned         | Planned | Planned           |
