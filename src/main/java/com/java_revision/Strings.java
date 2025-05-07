@@ -1,12 +1,13 @@
 package com.java_revision;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class Strings {
-    public void countVowels(String str) {
+    public void countVowelsConsonants(String str) {
         int vowelsCount = 0;
         for (char ch : str.toCharArray()) {
             ch = Character.toLowerCase(ch);
@@ -15,6 +16,7 @@ public class Strings {
             }
         }
         System.out.println(vowelsCount);
+        System.out.println(str.length() - vowelsCount);
     }
 
     public void reverseString(String str) {
@@ -161,9 +163,53 @@ public class Strings {
 
     }
 
+    public void stringCompression(String str) {
+
+    if (str == null || str.isEmpty()) {
+        System.out.println("");
+        return;
+    }
+
+    StringBuilder builder = new StringBuilder();
+    char currentChar = str.charAt(0);
+    int characterCount = 1;
+
+        for (int i = 1; i < str.length(); i++) {
+            if (currentChar == str.charAt(i)) {
+                characterCount++;
+                continue;     
+            }
+            builder.append(currentChar);
+            builder.append(characterCount);
+            currentChar = str.charAt(i);
+            characterCount = 1;
+        }
+        builder.append(currentChar);
+        builder.append(characterCount);
+        System.out.println(builder.toString());
+    }
+
+    public void findAllSubstrings(String str) {
+        int len = str.length();
+        for (int i = 0; i < len; i++) {
+            for (int j = i + 1; j < len; j++) {
+                System.out.println(str.substring(i, j));
+            }
+        }
+    }
+
     public static void main(String[] args) throws Exception {
+        String s = "  Java Programming  ";
+        System.out.println("Length: " + s.length());
+        System.out.println("Char at 2: " + s.charAt(2));
+        System.out.println("Substring: " + s.substring(2, 6));
+        System.out.println("Trimmed: " + s.trim());
+        System.out.println("Replaced: " + s.replace("a", "@"));
+        System.out.println("Lower: " + s.toLowerCase());
+        System.out.println("Split: " + Arrays.toString(s.split(" ")));
+
         Strings strings = new Strings();
-        strings.countVowels("Hello Java");
+        strings.countVowelsConsonants("Hello Java");
         strings.reverseString("Java");
         strings.checkPalindromeString("madam");
         strings.countWords("Java is awesome");
@@ -173,5 +219,7 @@ public class Strings {
         strings.removeDuplicateChars("Java");
         strings.findFirstNonRepeatingCharacter("Java");
         strings.checkAnagram("listen", "silent");
+        strings.findAllSubstrings("Java Programming");
+        strings.stringCompression("aabbccabcedccccccccccc");
     }
 }
