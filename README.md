@@ -1,22 +1,24 @@
-| #  | Topic                             | Status         | Theory/Examples | Quizzes | Practice Problems |
-| -- | --------------------------------- | -------------- | --------------- | ------- | ----------------- |
-| 1  | Introduction to Java              | ✅ Done         | ✅               | ✅       | ✅                 |
-| 2  | Variables & Data Types            | ✅ Done         | ✅               | ✅       | ✅                 |
-| 3  | Operators in Java                 | ✅ Done         | ✅               | ✅       | ✅                 |
-| 4  | Conditional Statements            | ✅ Done         | ✅               | ✅       | ✅                 |
-| 5  | Loops (for, while, do-while)      | ✅ Done         | ✅               | ✅       | ✅                 |
-| 6  | Strings in Java                   | ✅ Done         | ✅               | ✅       | ✅                 |
-| 7  | Arrays in Java                    | ✅ Done         | ✅               | ✅       | ✅                 |
-| 8  | Functions / Methods               | ✅ Done         | ✅               | ✅       | ✅                 |
-| 9  | Object-Oriented Programming (OOP) | ⏳ Pending      | Planned         | Planned | Planned           |
-| 10 | Exception Handling                | ✅ Done         | ✅               | ✅       | ✅                 |
-| 11 | Collections Framework             | ⏳ Pending      | Planned         | Planned | Planned           |
-| 12 | Java 8 Features (Streams, Lambda) | ⏳ Pending      | Planned         | Planned | Planned           |
-| 13 | Java 9–21 Version Updates         | ⏳ Pending      | Planned         | Planned | Planned           |
-| 14 | Multithreading & Concurrency      | ⏳ Pending      | Planned         | Planned | Planned           |
-| 15 | File I/O                          | ⏳ Pending      | Planned         | Planned | Planned           |
-| 16 | Java Memory Management            | ⏳ Pending      | Planned         | Planned | Planned           |
-| 17 | Design Patterns                   | ⏳ Pending      | Planned         | Planned | Planned           |
-| 18 | Unit Testing with JUnit           | ⏳ Pending      | Planned         | Planned | Planned           |
-| 19 | Build Tools (Maven/Gradle)        | ⏳ Pending      | Planned         | Planned | Planned           |
-| 20 | Project: Mini Java Application    | ⏳ Pending      | Planned         | Planned | Planned           |
+| #  | Java Topic                                   | Theory/Examples | Quizzes     | Practice Problems |
+| -- | -------------------------------------------- | --------------- | ----------- | ----------------- |
+| 1  | Java Basics (Syntax, Data Types)             | ✅ Completed     | ✅ Completed | ✅ Completed       |
+| 2  | Variables and Operators                      | ✅ Completed     | ✅ Completed | ✅ Completed       |
+| 3  | Control Flow (if, switch)                    | ✅ Completed     | ✅ Completed | ✅ Completed       |
+| 4  | Loops (for, while, do-while)                 | ✅ Completed     | ✅ Completed | ✅ Completed       |
+| 5  | Arrays (1D & 2D)                             | ✅ Completed     | ✅ Completed | ✅ Completed       |
+| 6  | Functions/Methods                            | ✅ Completed     | ✅ Completed | ✅ Completed       |
+| 7  | Object-Oriented Programming (OOP)            | ✅ Completed     | ✅ Completed | ✅ Completed       |
+| 8  | Inheritance                                  | ✅ Completed     | ✅ Completed | ✅ Completed       |
+| 9  | Polymorphism (Compile & Runtime)             | ✅ Completed     | ✅ Completed | ✅ Completed       |
+| 10 | Abstraction (abstract, interface)            | ✅ Completed     | ✅ Completed | ✅ Completed       |
+| 11 | Encapsulation & Constructor Chaining         | ✅ Completed     | ✅ Completed | ✅ Completed       |
+| 12 | Exception Handling                           | ✅ Completed     | ✅ Completed | ✅ Completed       |
+| 13 | Java Strings                                 | 🔲 Pending      | 🔲 Pending  | 🔲 Pending        |
+| 14 | Java Collections Framework (List, Set, Map)  | 🔲 Pending      | 🔲 Pending  | 🔲 Pending        |
+| 15 | File Handling (Reader, Writer, Streams)      | 🔲 Pending      | 🔲 Pending  | 🔲 Pending        |
+| 16 | Java 8 Features (Lambdas, Streams, Optional) | 🔲 Pending      | 🔲 Pending  | 🔲 Pending        |
+| 17 | Multithreading & Concurrency                 | 🔲 Pending      | 🔲 Pending  | 🔲 Pending        |
+| 18 | Java 9–21 Features Overview                  | 🔲 Pending      | 🔲 Pending  | 🔲 Pending        |
+| 19 | Java Memory Management                       | 🔲 Pending      | 🔲 Pending  | 🔲 Pending        |
+| 20 | Design Patterns                              | 🔲 Pending      | 🔲 Pending  | 🔲 Pending        |
+| 21 | TestNG & JUnit                               | 🔲 Pending      | 🔲 Pending  | 🔲 Pending        |
+| 22 | Mini Projects & Interview Problems           | 🔲 Pending      | 🔲 Pending  | 🔲 Pending        |

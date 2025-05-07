@@ -16,7 +16,7 @@ public class TestEmployee {
     }
 
     @Test
-    public void testManagerSalray(){
+    public void testManagerSalary(){
         Manager manger = new Manager("Manager", 456, 30000, 1000);
         Assert.assertEquals(manger.getSalary() + manger.getBonus(), manger.calculateTotalSalary());
     }
