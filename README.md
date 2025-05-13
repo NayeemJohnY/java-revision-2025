@@ -13,7 +13,7 @@
 | 11 | Encapsulation & Constructor Chaining         | ✅ Completed     | ✅ Completed | ✅ Completed       |
 | 12 | Exception Handling                           | ✅ Completed     | ✅ Completed | ✅ Completed       |
 | 13 | Java Strings                                 | ✅ Completed     | ✅ Completed | ✅ Completed       |
-| 14 | Java Collections Framework (List, Set, Map)  | 🔲 Pending      | 🔲 Pending  | 🔲 Pending        |
+| 14 | Java Collections Framework (List, Set, Map)  | ✅ Completed     | ✅ Completed | ✅ Completed       |
 | 15 | File Handling (Reader, Writer, Streams)      | 🔲 Pending      | 🔲 Pending  | 🔲 Pending        |
 | 16 | Java 8 Features (Lambdas, Streams, Optional) | 🔲 Pending      | 🔲 Pending  | 🔲 Pending        |
 | 17 | Multithreading & Concurrency                 | 🔲 Pending      | 🔲 Pending  | 🔲 Pending        |
