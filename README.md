@@ -15,7 +15,7 @@
 | 13 | Java Strings                                 | ✅ Completed     | ✅ Completed | ✅ Completed       |
 | 14 | Java Collections Framework (List, Set, Map)  | ✅ Completed     | ✅ Completed | ✅ Completed       |
 | 15 | File Handling (Reader, Writer, Streams)      | ✅ Completed     | ✅ Completed | ✅ Completed       |
-| 16 | Java 8 Features (Lambdas, Streams, Optional) | 🔲 Pending      | 🔲 Pending  | 🔲 Pending        |
+| 16 | Java 8 Features (Lambdas, Streams, Optional) | ✅ Completed     | ✅ Completed | 🔲 Pending        |
 | 17 | Multithreading & Concurrency                 | 🔲 Pending      | 🔲 Pending  | 🔲 Pending        |
 | 18 | Java 9–21 Features Overview                  | 🔲 Pending      | 🔲 Pending  | 🔲 Pending        |
 | 19 | Java Memory Management                       | 🔲 Pending      | 🔲 Pending  | 🔲 Pending        |

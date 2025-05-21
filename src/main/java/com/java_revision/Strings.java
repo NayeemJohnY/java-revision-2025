@@ -40,8 +40,7 @@ public class Strings {
     }
 
     public void countWords(String str) {
-        String[] words = str.split(" ");
-        words = str.trim().split("\\s+");
+        String[] words = str.trim().split("\\s+");
         System.out.println(words.length);
     }
 
