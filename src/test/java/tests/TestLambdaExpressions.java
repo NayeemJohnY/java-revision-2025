@@ -5,13 +5,16 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 import org.testng.annotations.Test;
 
@@ -302,5 +305,76 @@ public class TestLambdaExpressions {
 
         list = list.stream().sorted(Collections.reverseOrder()).toList();
         System.out.println(list);
+    }
+
+    /*
+     * Problem 31: Create a lambda to check if a number is prime
+     */
+    @Test
+    public void checkNumberisPrime(){
+        int n = 5;
+        System.out.println(IntStream.range(2, n/2 + 1).allMatch(i -> n % i != 0));
+    }
+    
+    /*
+     * Problem 32: Implement a lambda that returns factorial of a number.
+     */
+    @Test
+    public void factorialOfNumber(){
+        int n = 6;
+        System.out.println(IntStream.range(1, n+1).reduce(1, (a, b)-> a*b));
+    }
+
+    /*
+     * Problem 33: Write a lambda to reverse a string.
+     */
+    @Test
+    public void reverseString(){
+        String str = "Automation";
+        System.out.println(IntStream.range(0, str.length()).mapToObj(
+            i -> String.valueOf(str.charAt(str.length()-1-i))).reduce("", (a,b)-> a+b));
+    }
+
+    /*
+     * Problem 34: Sort a map by its values using lambda.
+     */
+    @Test
+    public void sortMapbyItsValue(){
+        String str = "Hello Welcome to Java Programming lambda Expression";
+        // 
+        Map<Character, Long> freqmMap = str.chars().mapToObj(
+            i -> (char) i).collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        System.out.println(freqmMap);
+        LinkedHashMap<Character, Long> sortedMap = freqmMap.entrySet().stream()
+        .sorted(Map.Entry.comparingByValue()) // (e1, e2)-> Long.compare(e1.getValue(), e2.getValue())
+        .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
+        System.out.println(sortedMap);
+    }
+
+    /*
+     * Problem 35: Replace all nulls in a list with a default string using lambda
+     */
+    @Test
+    public void replaceNullsWithDefaultString(){
+        List<String> list = Arrays.asList("Java", "Python", "Java", null, "Python", null, null);    
+        String defaultString = "NULL VALUE";
+        list = list.stream().map(e -> e == null ? defaultString : e).toList();
+        System.out.println(list);
+    }
+
+    /*
+     * Problem 36: Create a comparator using lambda for sorting custom objects.
+     */
+     @Test
+    public void sortCustomObjectsUsingLambda(){
+        List<Employee> employeeList = new ArrayList<>();
+        employeeList.add(new Employee("A", 123, 30000));
+        employeeList.add(new Employee("B", 123, 30000));
+        employeeList.add(new Employee("C", 123, 10000));
+        employeeList.add(new Employee("D", 123, 5000));
+
+        Comparator<Employee> comparator = (e1, e2) -> Integer.compare(e1.getSalary(), e2.getSalary());
+        employeeList.sort(comparator) ;
+        System.out.println(employeeList);
     }
 }
