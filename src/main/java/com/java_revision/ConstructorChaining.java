@@ -14,7 +14,7 @@ class Person {
     }
 }
 
-class StudentPerson extends Person {
+class StudentPerson extends SimplePerson {
     private int grade;
 
     public StudentPerson(String name, int age, int grade) {

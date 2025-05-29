@@ -7,11 +7,22 @@ public class Student {
     private String name;
     private int rollNo;
     private int[] marks;
+    private String grade;
+
+    public String getGrade() {
+        return grade;
+    }
 
     public Student(String name, int rollNo, int... marks) {
         this.name = name;
         this.rollNo = rollNo;
         this.marks = marks;
+        this.grade = "unknown";
+    }
+
+    public Student(String name, int rollNo, String grade, int... marks) {
+        this(name, rollNo, marks);
+        this.grade = grade;
     }
 
     public String getName() {
@@ -64,6 +75,7 @@ public class Student {
         return "Student{" +
                 "name='" + name + '\'' +
                 ", rollNo=" + rollNo +
+                ", grade=" + grade +
                 ", marks=" + Arrays.toString(marks) +
                 ", average=" + calculateAverage() +
                 ", grade='" + calculateGrade() + '\'' +
