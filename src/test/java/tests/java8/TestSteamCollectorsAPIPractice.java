@@ -1,4 +1,4 @@
-package tests;
+package tests.java8;
 
 import java.time.LocalDate;
 import java.util.AbstractMap;
@@ -69,7 +69,7 @@ public class TestSteamCollectorsAPIPractice {
         persons.add(new SimplePerson("DSA", 29));
         persons.add(new SimplePerson("QAW", 30));
         Assert.assertEquals(persons.stream().collect(Collectors.averagingInt(SimplePerson::getAge)).doubleValue(),
-                (25 + 29 + 30) / 3);
+                (25 + 29 + 30) / 3.0);
     }
 
     // Problem 6: Find the sum of integers in a list using Collectors.summingInt.
@@ -99,7 +99,8 @@ public class TestSteamCollectorsAPIPractice {
     @Test
     public void testFindLongestString() {
         List<String> list = Arrays.asList("js", "go", "java", "ruby", "Javascript", "perl", "Python");
-        list.stream().collect(Collectors.maxBy(Comparator.comparingInt(String::length))).ifPresent(System.out::println);
+        Assert.assertEquals(list.stream().collect(
+            Collectors.maxBy(Comparator.comparingInt(String::length))).get(), "Javascript");
     }
 
     // Problem 10: Convert stream of strings to TreeSet in natural order

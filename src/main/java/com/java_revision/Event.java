@@ -35,4 +35,8 @@ public class Event {
         return participents;
     }
 
+    public void displayEvent(){
+        System.out.println(toString());
+    }
+
 }

@@ -1,4 +1,4 @@
-package tests;
+package tests.java8;
 
 import java.util.ArrayList;
 import java.util.Arrays;
