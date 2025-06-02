@@ -14,7 +14,7 @@ import java.util.stream.IntStream;
 
 import org.testng.annotations.Test;
 
-public class TestStreamPerfOptimazation {
+public class TestStreamPerfOptimization {
 
     // 1. Convert a list of integers to strings using parallel stream
     @Test
