@@ -18,7 +18,7 @@ import com.java_revision.Employee;
 
 public class TestCompletableFuture {
 
-    public void threadSleep(long mills) {
+    public static void threadSleep(long mills) {
         try {
             Thread.sleep(mills);
         } catch (InterruptedException e) {
