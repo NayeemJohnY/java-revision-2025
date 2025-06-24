@@ -42,3 +42,37 @@ public class ThreadPools {
 
     }
 }
+
+
+class ParallelTestRunner {
+
+    public static void main(String[] args) {
+        // Step 1: Create ExecutorService with 2 threads
+        ExecutorService executor = Executors.newFixedThreadPool(2);
+        // Step 2: Define loginTest Runnable
+        Runnable loginTest = () -> {
+            System.out.println("Starting LoginTest on Thread "+ Thread.currentThread().getName());
+            ThreadHelper.threadSleep(2000);
+            System.out.println("Finished LoginTest on Thread "+ Thread.currentThread().getName());
+        };
+
+        // Step 3: Define searchTest Runnable
+        Runnable searchTest = () -> {
+            System.out.println("Starting searchTest on Thread "+ Thread.currentThread().getName());
+            ThreadHelper.threadSleep(1000);
+            System.out.println("Finished searchTest on Thread "+ Thread.currentThread().getName());
+        };
+        // Step 4: Define checkoutTest Runnable
+        Runnable checkoutTest = () -> {
+            System.out.println("Starting checkoutTest on Thread "+ Thread.currentThread().getName());
+            ThreadHelper.threadSleep(3000);
+            System.out.println("Finished checkoutTest on Thread "+ Thread.currentThread().getName());
+        };
+        // Step 5: Submit all tasks to ExecutorService
+        executor.submit(loginTest);
+        executor.submit(searchTest);
+        executor.submit(checkoutTest);
+        // Step 6: Shutdown the pool
+        executor.shutdown();
+    }
+}
